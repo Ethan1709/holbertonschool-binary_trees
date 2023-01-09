@@ -2,7 +2,7 @@
 
 /**
  * binary_tree_is_leaf - checks if a node is a leaf
- *node: ptr to the node to check
+ * @node: ptr to the node to check
  *
  * Return: 1 if a leaf or 0
  */
