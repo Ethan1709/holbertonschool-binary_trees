@@ -28,7 +28,7 @@ int height_perf(const binary_tree_t *tree)
  * tree_balance - checks if the tree is full
  * @tree: ptr to the root on the tree to check
  *
- * Return: 1 is success or 0 if fail
+ * Return: balance if success or 0 if fail
  */
 
 int tree_balance(const binary_tree_t *tree)
@@ -44,7 +44,7 @@ int tree_balance(const binary_tree_t *tree)
  * binary_tree_is_perfect - checks if the tree is perfect
  * @tree: ptr to the root on the tree to check
  *
- * Return: 1 is success or 0 if fail
+ * Return: 1 if success or 0 if fail
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
@@ -59,11 +59,14 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (a != b)
 		return (0);
-
-	z = tree_balance(tree->left);
-	y = tree_balance(tree->right);
-
-	if (z != y)
-		return (0);
-	return (1);
+	if (a = b)
+	{
+		z = tree_balance(tree->left);
+		y = tree_balance(tree->right);
+		if (z != y)
+			return (0);
+		if (z = y)
+			return (1);
+	}
+	return (42);
 }
