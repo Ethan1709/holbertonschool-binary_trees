@@ -63,5 +63,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	y = height_perf(tree->right);
 	if (z != y)
 		return (0);
-	return (0);
+	return (1);
 }
