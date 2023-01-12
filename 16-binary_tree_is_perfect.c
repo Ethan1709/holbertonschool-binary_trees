@@ -59,13 +59,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (a != b)
 		return (0);
-	if (a = b)
+	if (a == b)
 	{
 		z = tree_balance(tree->left);
 		y = tree_balance(tree->right);
 		if (z != y)
 			return (0);
-		if (z = y)
+		if (z == y)
 			return (1);
 	}
 	return (42);
