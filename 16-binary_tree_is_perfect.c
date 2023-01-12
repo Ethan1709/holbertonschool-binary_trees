@@ -25,7 +25,7 @@ int height_perf(const binary_tree_t *tree)
 
 
 /**
- * tree_full - checks if the tree is full
+ * tree_balance - checks if the tree is full
  * @tree: ptr to the root on the tree to check
  *
  * Return: 1 is success or 0 if fail
