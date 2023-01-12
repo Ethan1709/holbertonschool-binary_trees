@@ -49,21 +49,16 @@ int tree_balance(const binary_tree_t *tree)
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int a = 0, b = 0, z = 0, y = 0;
+	int perfect;
 
-	if (!tree)
+	perfect = binary_tree_balance(tree);
+	if (tree == NULL)
 		return (0);
-
-	z = height_perf(tree->left);
-	y = height_perf(tree->right);
-
-	if (z != y)
-		return (0);
-
-	a = tree_balance(tree->left);
-	b = tree_balance(tree->right);
-
-	if (a == b)
+	if (tree->left == NULL && tree->right == NULL)
 		return (1);
-	return (binary_tree_is_perfect(tree->left) && binary_tree_is_perfect(tree->right));
+	if (tree->left != NULL && tree->right != NULL &&
+		perfect == 0)
+	return (binary_tree_is_perfect(tree->left) &&
+		binary_tree_is_perfect(tree->right));
+	return (0);
 }
